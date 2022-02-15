@@ -417,6 +417,11 @@ class AlphaFold(nn.Module):
 
         # Main recycling loop
         num_iters = batch["aatype"].shape[-1]
+        print('-------------------------------------------------------------------')
+        print('-------------------------------------------------------------------')
+        print(num_iters)
+        print('-------------------------------------------------------------------')
+        print('-------------------------------------------------------------------')
         for cycle_no in range(num_iters):
             # Select the features for the current recycling cycle
             fetch_cur_batch = lambda t: t[..., cycle_no]
